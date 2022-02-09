@@ -1,0 +1,17 @@
+//@import "../../local_modules/normalize.css/normalize";
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	word-wrap: break-word;
+}
+
+li {
+	list-style-type: none; 
+}
+
+body, html{
+	min-height: 100%;
+	height: 100%;	  
+}

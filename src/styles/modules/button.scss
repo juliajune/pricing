@@ -1,0 +1,38 @@
+/* Button */
+.button{
+	font-size: 13px;
+	letter-spacing: 1px;
+	font-family: $font-family;
+	min-height: 44px;
+	line-height: 44px;
+	text-align: center;
+	display: block;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding:  0px 5px;
+	border-radius: $border-radius-button;
+	transition: $hover-effect;
+	&:hover{
+		cursor: pointer;
+		transition: $hover-effect;
+	}
+	&_light{
+		color: #6D72DE;
+		background-color: $color-white;		
+		border: 1px solid $color-white;
+		&:hover{
+			color: $color-white;
+			background-color: transparent;
+		}
+	}
+	&_dark{
+		color: $color-white;
+		background: $gradient;
+		border: 1px solid $color-button-border;
+		&:hover{
+			color: #6D72DE;
+			background-color: transparent;
+		}
+	}	
+}
+/* /Button */

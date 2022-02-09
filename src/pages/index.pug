@@ -1,0 +1,31 @@
+extends common/layout
+include mixins/rateMixin
+block content
+  // Page
+  .page
+    // Container
+    .container
+      h1.page__title.page-title our pricing
+      .page__content
+        // Plan
+        .plan 
+          // Plan switcher (toggle)          
+          span.plan__label Annually
+          input.toggle__checkbox.plan__toggle(type="checkbox" id="toggle-checkbox")
+          label.toggle.plan__toggle(for="toggle-checkbox")
+          span.plan__label Monthly
+          // /Plan switcher (toggle)   
+          // Plan monthly
+          .plan__content.plan-monthly
+            .plan__inner
+              include includes/index/rate-monthly
+          // /Plan monthly
+          // Plan annually                          
+          .plan__content.plan-annually
+            .plan__inner
+              include includes/index/rate-annually              
+          // /Plan annually
+        // /Plan
+    // /Container
+  // /Page
+        

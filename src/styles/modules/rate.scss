@@ -1,0 +1,75 @@
+/* Rate */
+.rate{
+	font-family: $font-family;
+	background-color: white;
+	font-style: normal;
+	font-weight: bold;
+	color: $color-blue;
+	padding: 30px 25px;
+	box-shadow: $box-shadow;
+	border-radius: 10px;
+	@media screen and (min-width: 992px){		
+		&:nth-child(2n) {
+  			padding: 50px 30px;  			
+		}
+	}		
+	&__title{
+		font-size: 18px;
+		line-height: 28px;
+		margin-bottom: 23px;
+		text-align: center;		
+	}
+
+	&__price{
+		font-size: 72px;
+		line-height: 74px;
+		letter-spacing: -2px;
+		color: $color-blue-dark;
+		margin-bottom: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		span{
+			font-size: 40px;
+			letter-spacing: -1.2px;			
+		}
+		@media screen and (min-width: 1200px){
+			margin-bottom: 32px;				
+		}	
+	}
+	&__content{		
+		width: 100%;
+		text-align: center;
+		flex-grow: 1;
+		margin-bottom: 32px;
+	}
+	&__item{
+		color: $color-blue-dark;
+		font-size: 15px;
+		line-height: 28px;
+		padding: 12px 5px;
+		border-bottom: 1px solid $border-dark-color;
+		&:first-child{
+			border-top: 1px solid $border-dark-color;	
+		}
+	}
+	&__button{
+		width: 100%;
+	}
+	&_dark{
+		color: $color-white;
+		background: $gradient;
+		.rate__item{
+			color: $color-white;
+			border-bottom: 1px solid $border-light-color;
+			&:first-child{
+				border-top: 1px solid $border-light-color;
+			}
+		}
+		.rate__price{
+			color: $color-white;
+		}		
+	}
+}
+/* /Rate */

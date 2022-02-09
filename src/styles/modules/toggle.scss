@@ -1,0 +1,96 @@
+/* Toggle */
+.toggle{
+	position: relative;
+	display: inline-block;
+	height: 32px;
+	width: 56px;
+	&__checkbox{
+		display: none;
+	}	
+	&:before{
+		content: '';
+		display: block;
+		position: absolute;
+		width: 56px;
+		height: 32px;
+		background: $gradient;
+		border-radius: 16px;				
+	}
+	&:after{
+		content: '';
+		display: block;
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		background-color: $color-white;
+		border-radius: 12px;
+		top: 4px;
+		left: 28px;		
+	}
+	@media screen and (min-width: 992px){
+		&:hover{
+			cursor: pointer;
+			transition: $hover-effect;
+			&:before{
+				opacity: 0.65;					
+			}
+		}
+    }			
+}
+
+.toggle__checkbox:checked+.toggle::after{
+	left: 4px;			
+}
+/* /Toggle */
+
+
+.togglelabel{
+	display: inline-block;
+	position: relative;
+	height: 32px;
+	width: 56px;	
+	&:before{
+		content: '';
+		display: block;
+		position: absolute;
+		width: 56px;
+		height: 32px;
+		background: $gradient;
+		border-radius: 16px;
+		top: 0;
+		left: 0;				
+	}
+	&:after{
+		content: '';
+		display: block;
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		background-color: $color-white;
+		border-radius: 12px;
+		top: 4px;
+		left: 28px;		
+	}
+	@media screen and (min-width: 992px){
+		&:hover{
+			cursor: pointer;
+			transition: $hover-effect;
+			&:before{
+				opacity: 0.65;					
+			}
+		}
+    }			
+}
+
+.toggle:checked::after {
+    left: 4px;
+}
+/* /Toggle */
+
+.togglelabel__checkbox{
+	display: none;
+}
+
+.togglelabel__checkbox:checked+.togglelabel::after{
+	left: 4px;			
+}

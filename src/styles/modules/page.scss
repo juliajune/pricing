@@ -1,0 +1,13 @@
+/* Page */
+.page{
+	padding: 65px 0px;
+	background: url(../img/mobile-bg.svg) 100% 0% no-repeat;
+	&__title{
+		margin-bottom: 30px;
+	}
+	@media screen and (min-width: 1200px){
+		padding: 70px 0px;
+		background: url(../img/bg-bottom.svg) 0% 100% no-repeat, url(../img/bg-top.svg) 100% 0% no-repeat;			
+	}	
+}
+/* /Page */

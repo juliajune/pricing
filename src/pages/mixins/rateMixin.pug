@@ -1,0 +1,26 @@
+//- Rate mixin
+mixin rateMixin(rateTitle, ratePrice, rateItems, rateStyle)
+  if rateStyle=='dark'
+    // Rate
+    .rate.rate_dark.plan__item
+      h2.rate__title=rateTitle
+      .rate__price 
+        span $ 
+        |#{ratePrice} 
+      .rate__content
+        each item in rateItems
+          .rate__item=item
+      a.rate__button.button.button_light(href="#") Learn More
+    // /Rate
+  else
+    // Rate 
+    .rate.plan__item
+      h2.rate__title=rateTitle
+      .rate__price 
+        span $ 
+        |#{ratePrice}  
+      .rate__content
+        each item in rateItems
+          .rate__item=item
+      a.rate__button.button.button_dark(href="#") Learn More
+    // /Rate
